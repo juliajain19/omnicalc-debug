@@ -2,7 +2,7 @@ require 'rails_helper'
 require 'webmock'
 
 describe "/coords-to-weather/new" do
-  it "displays the latitude", points: 0 do
+  it "displays the latitude when form is submitted", points: 0 do
     #====================  Begin setup  ===========================#
     # captures two potential URL patterns from the controller forceast API calls
     old_forecasts_url = /.*api.forecast.io\/forecast\/.*\/#{Regexp.new('38.8977332')},#{Regexp.new('-77.0365305')}/
@@ -22,7 +22,7 @@ describe "/coords-to-weather/new" do
 end
 
 describe "/coords-to-weather/new" do
-  it "displays the longitude", points: 0 do
+  it "displays the longitude when form is submitted", points: 0 do
     #====================  Begin setup  ===========================#
     # captures two potential URL patterns from the controller forceast API calls
     old_forecasts_url = /.*api.forecast.io\/forecast\/.*\/#{Regexp.new('38.8977332')},#{Regexp.new('-77.0365305')}/
@@ -42,7 +42,7 @@ describe "/coords-to-weather/new" do
 end
 
 describe "/coords-to-weather/new" do
-  it "displays the current temperature", points: 1 do
+  it "displays the current temperature when form is submitted", points: 1 do
     #====================  Begin setup  ===========================#
     # captures two potential URL patterns from the controller forceast API calls
     old_forecasts_url = /.*api.forecast.io\/forecast\/.*\/#{Regexp.new('38.8977332')},#{Regexp.new('-77.0365305')}/
@@ -63,7 +63,7 @@ describe "/coords-to-weather/new" do
 end
 
 describe "/coords-to-weather/new" do
-  it "displays the current summary", points: 1 do
+  it "displays the current summary when form is submitted", points: 1 do
     #====================  Begin setup  ===========================#
     # captures two potential URL patterns from the controller forceast API calls
     old_forecasts_url = /.*api.forecast.io\/forecast\/.*\/#{Regexp.new('38.8977332')},#{Regexp.new('-77.0365305')}/
@@ -84,7 +84,7 @@ describe "/coords-to-weather/new" do
 end
 
 describe "/coords-to-weather/new" do
-  it "displays the outlook for the next sixty minutes", points: 1 do
+  it "displays the outlook for the next sixty minutes on form submit", points: 1 do
     #====================  Begin setup  ===========================#
     # captures two potential URL patterns from the controller forceast API calls
     old_forecasts_url = /.*api.forecast.io\/forecast\/.*\/#{Regexp.new('38.8977332')},#{Regexp.new('-77.0365305')}/
@@ -105,7 +105,7 @@ describe "/coords-to-weather/new" do
 end
 
 describe "/coords-to-weather/new" do
-  it "displays the outlook for the next several hours", points: 1 do
+  it "displays the outlook for the next several hours when form submits", points: 1 do
     #====================  Begin setup  ===========================#
     # captures two potential URL patterns from the controller forceast API calls
     old_forecasts_url = /.*api.forecast.io\/forecast\/.*\/#{Regexp.new('38.8977332')},#{Regexp.new('-77.0365305')}/
@@ -126,7 +126,7 @@ describe "/coords-to-weather/new" do
 end
 
 describe "/coords-to-weather/new" do
-  it "displays the outlook for the next several days", points: 1 do
+  it "displays the outlook for the next several days when form submits", points: 1 do
     #====================  Begin setup  ===========================#
     # captures two potential URL patterns from the controller forceast API calls
     old_forecasts_url = /.*api.forecast.io\/forecast\/.*\/#{Regexp.new('38.8977332')},#{Regexp.new('-77.0365305')}/
