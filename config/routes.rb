@@ -1,17 +1,16 @@
 Rails.application.routes.draw do
 
-  get("/", { :controller => "calculations", :action => "square" })
 
-  get("/square/new", { :controller => "calculations", :action => "square" })
-  get("/square/results", { :controller => "calculations", :action => "square_results" })
+  get("/", { :controller => "geocoding", :action => "street_to_coords_form" })
+
+  get("/street-to-coords/new", { :controller => "geocoding", :action => "street_to_coords_form" })
+  get("/street-to-coords/results", { :controller => "geocoding", :action => "street_to_coords" })
+
+  get("/coords-to-weather/new", { :controller => "forecast", :action => "coords_to_weather_form" })
+  get("/coords-to-weather/results", { :controller => "forecast", :action => "coords_to_weather" })
+
+  get("/street-to-weather/new", { :controller => "meteorologist", :action => "street_to_weather_form" })
+  get("/street-to-weather/results", { :controller => "meteorologist", :action => "street_to_weather" })
   
-  get("/square_root/new", { :controller => "calculations", :action => "square_root" })
-  get("/square_root/results", { :controller => "calculations", :action => "square_root_results" })
-
-  get("/payment/new", { :controller => "calculations", :action => "payment" })
-  get("/payment/results", { :controller => "calculations", :action => "payment_results" })
-
-  get("/random/new", { :controller => "calculations", :action => "random" })
-  get("/random/results", { :controller => "calculations", :action => "random_results" })
   
 end
